@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayout1">
+
+                <!-- toolbar -->
+                <include layout="@layout/snippet_top_nexttoolbar"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout1"
+                android:id="@+id/relLayout2"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/imageShare"
+                    android:scaleType="centerCrop"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="40dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageShare"
+                    android:id="@+id/title"
+                    android:hint="Title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/relLayout2"
+                android:id="@+id/linearLayout1"
+                android:background="@color/white">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerCategory"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="Category"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical">
+
+
+                </Spinner>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerPrivacy"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="Privacy"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical">
+
+
+                </Spinner>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tags"
+                    android:hint="#tag1 #tag2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp"
+                    android:background="@null"
+                    />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerCollege"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="College"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical">
+
+
+                </Spinner>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerYear"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="Year"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical">
+
+
+                </Spinner>
+
+
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerBranch"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="Branch"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical">
+
+
+                </Spinner>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploading..."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/uploading"/>
+
+</RelativeLayout>
